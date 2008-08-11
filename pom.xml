@@ -25,6 +25,17 @@
       </roles>
       <timezone>0</timezone>
     </developer>
+    <developer>
+    	<id>dallaway</id>
+    	<name>Richard Dallaway</name>
+    	<email>dallaway@gmail.com</email>
+    	<organization>Spiral Arm Ltd</organization>
+    	<organizationUrl>http://www.spiralarm.com/</organizationUrl>
+    	<roles>
+    		<role>developer</role>
+    		<role>tester</role>
+    	</roles>
+    </developer>
   </developers>
 
   <repositories>
