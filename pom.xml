@@ -25,6 +25,7 @@
       </roles>
       <timezone>0</timezone>
     </developer>
+  </developers>
 
   <repositories>
     <repository>
