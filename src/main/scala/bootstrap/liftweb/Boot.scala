@@ -15,6 +15,8 @@ import org.lsug.website.model._
   */
 class Boot {
   def boot {
+    DefaultConnectionIdentifier.jndiName = "jdbc/DSTest"
+    
     if (!DB.jndiJdbcConnAvailable_?) DB.defineConnectionManager(DefaultConnectionIdentifier, DBVendor)
     // where to search snippet
     LiftRules.addToPackages("org.lsug.website")     
