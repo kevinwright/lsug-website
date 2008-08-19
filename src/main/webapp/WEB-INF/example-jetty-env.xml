@@ -1,3 +1,9 @@
+<!-- This is merely an example of how to configure a MySQL JNDI data source for jetty.
+     To use it for real, change the strings databaseNameHere, usernameHere, passwordHere
+     to what they really correspond to, then rename this file to simply "jetty-env.xml"
+     and save it in the WEB-INF directory.
+-->
+
 <?xml version="1.0"?>
 <!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
 <Configure class="org.mortbay.jetty.webapp.WebAppContext">
