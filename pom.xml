@@ -9,6 +9,7 @@
     <inceptionYear>2007</inceptionYear>
     <properties>
         <scala.version>2.7.1</scala.version>
+        <jetty.version>[6.1.6,)</jetty.version>
     </properties>
 
     <developers>
@@ -85,18 +86,18 @@
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jetty</artifactId>
-            <version>[6.1.6,)</version>
+            <version>${jetty.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jetty-plus</artifactId>
-            <version>6.1.6</version>
+            <version>${jetty.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jetty-naming</artifactId>
-            <version>6.1.6</version>
+            <version>${jetty.version}</version>
         </dependency>        
     <!-- for LiftConsole -->
         <dependency>
