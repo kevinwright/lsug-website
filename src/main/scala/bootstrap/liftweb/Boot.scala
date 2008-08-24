@@ -15,7 +15,7 @@ import org.lsug.website.model._
   */
 class Boot {
   def boot {
-    DefaultConnectionIdentifier.jndiName = "jdbc/DSTest"
+    DefaultConnectionIdentifier.jndiName = "jdbc/scalausergroup"
     
     if (!DB.jndiJdbcConnAvailable_?) DB.defineConnectionManager(DefaultConnectionIdentifier, DBVendor)
     // where to search snippet
