@@ -22,18 +22,15 @@ class Boot {
     LiftRules.addToPackages("org.lsug.website")     
     Schemifier.schemify(true, Log.infoF _, User)
 
-    LiftRules.addTemplateBefore(User.templates)
-
     // Build SiteMap
-    val entries = Menu(Loc("Home", "/", "Home")) :: User.sitemap
+    val entries = Menu(Loc("Home", List("index"), "Home")) :: User.sitemap
     LiftRules.setSiteMap(SiteMap(entries:_*))
-    S.addAround(User.requestLoans)
   }
 }
 
 
 object DBVendor extends ConnectionManager {
-  def newConnection(name: ConnectionIdentifier): Can[Connection] = {
+  def newConnection(name: ConnectionIdentifier): Box[Connection] = {
     try {
       Class.forName("org.apache.derby.jdbc.EmbeddedDriver")
       val dm = DriverManager.getConnection("jdbc:derby:lift_example;create=true")

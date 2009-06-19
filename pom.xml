@@ -8,11 +8,24 @@
     <name>lsug-website</name>
     <inceptionYear>2007</inceptionYear>
     <properties>
-        <scala.version>2.7.5</scala.version>
+        <scala.version>2.7.4</scala.version>
         <jetty.version>[6.1.6,7.0.0)</jetty.version>
     </properties>
 
     <developers>
+        <developer>
+            <id>kev.lee.wright</id>
+            <name>Kevin Wright</name>
+            <email>kev.lee.wright@gmail.com</email>
+            <organization>lsug.org</organization>
+            <organizationUrl>http://www.lsug.org/</organizationUrl>
+            <roles>
+                <role>administrator</role>
+                <role>developer</role>
+                <role>tester</role>
+            </roles>
+            <timezone>0</timezone>
+        </developer>
         <developer>
             <id>aaron.k.roth</id>
             <name>Aaron Roth</name>
@@ -136,6 +149,7 @@
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>maven-jetty-plugin</artifactId>
                 <configuration>
+                    <jettyEnvXml>${basedir}/src/main/config/jetty-env.xml</jettyEnvXml>
                     <contextPath>/</contextPath>
                     <scanIntervalSeconds>5</scanIntervalSeconds>
                 </configuration>
@@ -182,7 +196,7 @@
                   <configuration>
                      <tasks>
                        <copy todir="${basedir}/target/tomcat_base">
-                           <fileset dir="${basedir}/src/tomcat"></fileset>
+                           <fileset dir="${basedir}/src/tomcat"/>
                        </copy>
                      </tasks>
                   </configuration>

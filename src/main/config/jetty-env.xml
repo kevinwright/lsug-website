@@ -1,11 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+
 <!-- This is merely an example of how to configure a MySQL JNDI data source for jetty.
      To use it for real, change the strings databaseNameHere, usernameHere, passwordHere
      to what they really correspond to, then rename this file to simply "jetty-env.xml"
      and save it in the WEB-INF directory.
 -->
 
-<?xml version="1.0"?>
-<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
 <Configure class="org.mortbay.jetty.webapp.WebAppContext">
     <!-- <Set name="contextPath">/</Set> -->
     <New id="DSTest" class="org.mortbay.jetty.plus.naming.Resource">
@@ -15,6 +16,16 @@
                 <Set name="Url">jdbc:mysql://localhost:3306/lsug</Set>
                 <Set name="User">lsug-user</Set>
                 <Set name="Password">lsug-password</Set>
+            </New>
+        </Arg>
+    </New>
+
+    <New id="scalausergroup" class="org.mortbay.jetty.plus.naming.Resource">
+        <Arg>jdbc/scalausergroup</Arg>
+        <Arg>
+            <New class="org.apache.derby.jdbc.EmbeddedDataSource">
+                <Set name="DatabaseName">scalausergroup</Set>
+                <Set name="createDatabase">create</Set>
             </New>
         </Arg>
     </New>
