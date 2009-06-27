@@ -19,7 +19,7 @@ class Boot {
     
     if (!DB.jndiJdbcConnAvailable_?) DB.defineConnectionManager(DefaultConnectionIdentifier, DBVendor)
     // where to search snippet
-    LiftRules.addToPackages("org.lsug.website")     
+    LiftRules.addToPackages("org.lsug.website")
     Schemifier.schemify(true, Log.infoF _, User)
 
     // Build SiteMap

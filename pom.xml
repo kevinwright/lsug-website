@@ -8,6 +8,7 @@
     <name>lsug-website</name>
     <inceptionYear>2007</inceptionYear>
     <properties>
+        <lift.version>1.1-M1</lift.version>
         <scala.version>2.7.4</scala.version>
         <jetty.version>[6.1.6,7.0.0)</jetty.version>
     </properties>
@@ -58,6 +59,11 @@
             <name>Scala-Tools Maven2 Repository</name>
             <url>http://scala-tools.org/repo-releases</url>
         </repository>
+        <repository>
+            <id>scala-tools.org snapshots</id>
+            <name>Scala-Tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-snapshots</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -77,7 +83,7 @@
         <dependency>
             <groupId>net.liftweb</groupId>
             <artifactId>lift-core</artifactId>
-            <version>1.1-M1</version>
+            <version>${lift.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.derby</groupId>
