@@ -24,6 +24,6 @@ class AppTest extends TestCase("app") {
      */
     def testOK() = assertTrue(true);
     //def testKO() = assertTrue(false);
-    
+
 
 }
